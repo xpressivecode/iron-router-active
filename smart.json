@@ -4,5 +4,8 @@
     "homepage": "https://github.com/XpressiveCode/iron-router-active",
     "author": "Mike Fitzgerald (https://github.com/xpressivecode)",
     "version": "0.1.0",
-    "git": "https://github.com/XpressiveCode/iron-router-active.git"
+    "git": "https://github.com/XpressiveCode/iron-router-active.git",
+    "packages": {
+    	"iron-router": {}
+  	}
 }

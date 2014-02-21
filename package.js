@@ -10,6 +10,6 @@ Package.on_use(function(api){
 
     api.add_files([
     	'LICENSE',
-    	'lib/helpers/iron-router-active.js'
+    	'lib/client/helpers.js'
     ], 'client');
 });
