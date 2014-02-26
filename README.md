@@ -11,9 +11,9 @@ installation
 usage
 =====
 
-After installing the smart package, you'll have access to two new handlebars helpers called `isActive` and `isActivePath`. 
+After installing the smart package, you'll have access to four new handlebars helpers called `isActive`, `isActivePath`, `isNotActive` and `isNotActivePath`. 
 
-isActive works against route names, while isActivePath works against the current routes path. It works well with dynamic routes.
+isActive|isNotActive works against route names, while isActivePath|isNotActivePath works against the current routes path. It works well with dynamic routes.
 
 The helpers take 2 arguments.
 
@@ -21,7 +21,7 @@ The helpers take 2 arguments.
 
 This value is a regex expression so that you can pass in multiple routes with the | operator. I was unable to pass inline arrays into a Handlebars helper, so this was the next best alternative. 
 
-2) className: this is an optional argument. if you do not set it, it will default to `active`. you can override that value, by specifying your own.
+2) className: this is an optional argument. if you do not set it, it will default to `active`. you can override that value, by specifying your own. The two `not active` apis will return a class of `disabled` if you do not specify one.
 
 ```html
 <nav>
