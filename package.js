@@ -5,7 +5,8 @@ Package.describe({
 Package.on_use(function(api){
     api.use([
 		'iron-router',
-		'handlebars'
+		'handlebars',
+		'ui'
     ], 'client');
 
     api.add_files([
