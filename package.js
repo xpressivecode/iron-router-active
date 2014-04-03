@@ -4,12 +4,14 @@ Package.describe({
 
 Package.on_use(function(api){
     api.use([
-		'iron-router',
-		'handlebars'
+        'coffeescript',
+        'iron-router',
+        'ui'
     ], 'client');
 
     api.add_files([
-    	'LICENSE',
-    	'lib/client/helpers.js'
+        'LICENSE',
+        'lib/client/helpers.coffee',
+        'lib/client/routeutils.coffee'
     ], 'client');
 });
