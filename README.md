@@ -1,19 +1,27 @@
 iron-router-active
 ==================
 
-Quick Handlebars helper to determine if the current route is active, for nav links.
+Quick UI helper to determine if the current route is active, for nav links.
 
 installation
 ============
 
 `mrt add iron-router-active`
 
+update
+======
+
+1. Updated to support Meteor 8.0 (blaze). Thanks to those who contributed to make this happen
+
+2. The methods `isActive` and `isNotActive` have been renamed to be more explicit in order to help gaurd against conflicting with any project code.
+The names were too generic. They are now called `isActiveRoute` and `isNotActiveRoute` to match that of `isActivePath` etc.
+
 usage
 =====
 
-After installing the smart package, you'll have access to four new handlebars helpers called `isActive`, `isActivePath`, `isNotActive` and `isNotActivePath`. 
+After installing the smart package, you'll have access to four new UI helpers called `isActiveRoute`, `isActivePath`, `isNotActiveRoute` and `isNotActivePath`.
 
-isActive|isNotActive works against route names, while isActivePath|isNotActivePath works against the current routes path. It works well with dynamic routes.
+isActiveRoute|isNotActiveRoute works against route names, while isActivePath|isNotActivePath works against the current routes path. It works well with dynamic routes.
 
 The helpers take 2 arguments.
 
@@ -26,9 +34,9 @@ This value is a regex expression so that you can pass in multiple routes with th
 ```html
 <nav>
 	<ul>
-		<li class="{{ isActive 'dashboard' }}">...</li>
-		<li class="{{ isActive 'dashboard|root' }}">...</li>
-		<li class="{{ isActive 'users' 'on' }}">...</li>
+		<li class="{{ isActiveRoute 'dashboard' }}">...</li>
+		<li class="{{ isActiveRoute 'dashboard|root' }}">...</li>
+		<li class="{{ isActiveRoute 'users' 'on' }}">...</li>
 		<li class="{{ isActivePath 'products' }}">...</li>
 	</ul>
 </nav>
@@ -38,7 +46,7 @@ In the first example, the LI element will have a class of `active`, as we've use
 
 In the second example, you can see an example of passing in multiple routes. 
 
-In the third example, the LI element will have a class of `on`, as we've overriden the default value with our own.
+In the third example, the LI element will have a class of `on`, as we've overridden the default value with our own.
 
 In the fourth example, you can see an example of checking to see if the current url contains the noun `products`, which will handle multiple scenarios, such as
 
